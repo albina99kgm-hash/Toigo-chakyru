@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="ky">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Улан ❤️ Гүлсана</title>
+
+<style>
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+
+ margin:0;
+
+ background:#fff9f7;
+
+ color:#633b3b;
+
+ font-family:Georgia,serif;
+
+ text-align:center;
+
+}
+
+section{
+
+ min-height:100vh;
+
+ padding:55px 22px;
+
+ display:flex;
+
+ flex-direction:column;
+
+ justify-content:center;
+
+ align-items:center;
+
+ position:relative;
+
+ overflow:hidden;
+
+}
+
+.cover{
+
+ background:linear-gradient(#fff7f0bb,#fff7f0dd),
+
+ url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1200');
+
+ background-size:cover;
+
+ background-position:center;
+
+}
+
+h1{font-size:48px;color:#a52e40;font-weight:normal}
+
+h2{font-size:30px;color:#a52e40;font-weight:normal}
+
+p{font-size:18px;line-height:1.9}
+
+.flower{font-size:48px;margin:15px}
+
+.card{
+
+ background:#ffffffdf;
+
+ border:1px solid #d9a0a0;
+
+ padding:30px 20px;
+
+ border-radius:18px;
+
+ max-width:420px;
+
+ width:100%;
+
+}
+
+.date{
+
+ font-size:26px;
+
+ color:#a52e40;
+
+ border-top:1px solid #d9a0a0;
+
+ border-bottom:1px solid #d9a0a0;
+
+ padding:18px;
+
+ margin:20px 0;
+
+}
+
+button{
+
+ background:#a52e40;
+
+ color:white;
+
+ border:0;
+
+ padding:14px 25px;
+
+ border-radius:30px;
+
+ font-size:16px;
+
+ margin:10px;
+
+}
+
+.fade{opacity:0;transform:translateY(30px);transition:1s}
+
+.fade.show{opacity:1;transform:translateY(0)}
+
+footer{padding:30px;color:#a52e40}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="cover">
+
+ <div class="flower">🌷🤍🌷</div>
+
+ <p>Сүйүүбүздүн эң бактылуу күнү</p>
+
+ <h1>Улан & Гүлсана</h1>
+
+ <p>Үйлөнүү тоюбузга чакырабыз!</p>
+
+ <div class="flower">🌹</div>
+
+ <button onclick="document.getElementById('welcome').scrollIntoView()">
+
+ Чакыруу
+
+ </button>
+
+</section>
+
+<section id="welcome">
+
+ <div class="card fade">
+
+  <div class="flower">🌷</div>
+
+  <p>Урматтуу</p>
+
+  <h2>Оомат жана Салиха!</h2>
+
+  <p>
+
+  Сиздерди жашообуздагы өзгөчө,
+
+  бактылуу күнүбүздүн күбөсү
+
+  болууга чын жүрөктөн чакырабыз.
+
+  </p>
+
+ </div>
+
+</section>
+
+<section>
+
+ <div class="fade">
+
+  <div class="flower">🤍🌷❤️</div>
+
+  <p>Биздин үйлөнүү тоюбуз</p>
+
+  <h1>Улан & Гүлсана</h1>
+
+  <p>Эки жүрөк — бир тагдыр!</p>
+
+ </div>
+
+</section>
+
+<section>
+
+ <div class="card fade">
+
+  <h2>Той күнү</h2>
+
+  <div class="date">12 · 12 · 2026</div>
+
+  <h2>17:00</h2>
+
+  <p>Сиздерди күтөбүз!</p>
+
+ </div>
+
+</section>
+
+<section>
+
+ <div class="card fade">
+
+  <div class="flower">🌷</div>
+
+  <h2>Той өтүүчү дарек</h2>
+
+  <p>Манас шаары</p>
+
+  <h2>«Ак-Бата» рестораны</h2>
+
+ </div>
+
+</section>
+
+<section>
+
+ <div class="card fade">
+
+  <div class="flower">❤️</div>
+
+  <h2>Жүрөктөн чыккан ыраазычылык</h2>
+
+  <p>
+
+  Биздин кубанычыбызды тең бөлүшүп,
+
+  бактылуу күнүбүзгө күбө болгонуңуздар
+
+  үчүн терең ыраазычылык билдиребиз!
+
+  </p>
+
+  <h2>Урматтоо менен,<br>Улан жана Гүлсана</h2>
+
+  <div class="flower">🌷🤍🌷</div>
+
+ </div>
+
+</section>
+
+<footer>Сүйүү менен ❤️</footer>
+
+<script>
+
+const observer=new IntersectionObserver(entries=>{
+
+ entries.forEach(entry=>{
+
+  if(entry.isIntersecting){
+
+   entry.target.classList.add('show');
+
+  }
+
+ });
+
+},{threshold:0.15});
+
+document.querySelectorAll('.fade').forEach(el=>{
+
+ observer.observe(el);
+
+});
+
+</script>
+
+</body>
+
+</html>
